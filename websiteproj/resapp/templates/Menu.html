@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Grid{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 0.0005cm;
+        column-gap: 1cm;
+    }
+    .food-items{
+        padding:15px;
+    }
+    .food-items img{
+        width:70%;
+        height: 40%;
+        object-fit: cover;
+        box-shadow: 6px 6px 16px rgb(10, 10, 10);
+        border-radius: 50%;
+        z-index:2;
+        position:relative;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+    }
+   
+    p,h4{
+        color: rgb(11, 1, 1);
+        font-size:0.6cm;
+        font-weight: 600;
+        text-shadow: 2px 1px 4px white;
+        text-align: center;
+    }
+    h1{
+        color: white;
+        text-shadow: 6px 6px 16px rgb(12, 0, 0);
+        text-align: center;
+       
+        
+    }
+    .main{
+        text-align: center;
+        
+        padding: 0.5cm;
+    }
+        a {
+    text-decoration: none; 
+    color: black;           
+    margin: 0 100px;        
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+nav {
+    text-align: center;
+    
+    padding: 1px;
+    
+   }
+    nav a:hover{
+        text-decoration: underline;
+        
+    }
+    .bg-img{
+        position:fixed;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        
+    }
+    .all{
+        position:relative;
+        color:rgb(11, 0, 0);
+        z-index:1;
+    }
+
+
+</style>
+<body>
+    {% load static %}
+    <img src="{% static 'b.jpg' %}" class="bg-img">
+<div class="all">
+    <div class="main">
+        <nav>
+            <a href="{% url 'home' %}">HOME</a> MENU <a href="{% url 'adminstration' %}">ADMINSTRATION</a> <a href="{% url 'contact' %}">CONTACT US</a>
+            
+        </nav>
+    </div>
+    <h1>DELICIOUS FOOD MENU</h1>
+    <div class="Grid">
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static 'chicken fired rice.jpg' %}" alt="picture">
+       <h4>CHICKEN FIRED RICE</h4>
+       <p>PRICE : Rs.200</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'beef biriyani.jpg' %}" alt="picture">
+       <h4>BEEF BIRIYANI</h4>
+       <p>PRICE : Rs.300</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'dosa.jpg' %}" alt="picture">
+       <h4>DOSA</h4>ś
+       <p>PRICE : Rs.150</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'chapathi and gravy.jpg' %}" alt="picture">
+       <h4>CHAPATHI AND GRAVY</h4>
+       <p>PRICE : Rs.150</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'parato.jpg' %}" alt="picture">
+       <h4>PARATO</h4>
+       <p>PRICE : Rs.160</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'burger.jpg' %}" alt="picture">
+       <h4>BURGER</h4>
+       <p>PRICE : Rs.300</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'pasta.jpg' %}" alt="picture">
+       <h4>PASTA</h4>
+       <p>PRICE : Rs.300</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'Sizzler.jpg' %}" alt="picture">
+       <h4>SIZZLER</h4>
+       <p>PRICE : Rs.400</p>
+       </div>
+
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'french fries.jpg' %}" alt="picture">
+       <h4>FRECH FRIES</h4>
+       <p>PRICE : Rs.200</p>
+       </div>
+
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'cold cofee1.jpg' %}" alt="picture">
+       <h4>COLD COFFEE</h4>
+       <p>PRICE : Rs.200</p>
+       </div>
+
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'mocktail.jpg' %}" alt="picture">
+       <h4>LIME MOCKTAIL</h4>
+       <p>PRICE : Rs.150</p>
+       </div>
+
+ 
+       <div class="food-items">
+        {% load static %}
+       <img src="{% static  'ice cream.jpg' %}" alt="picture">
+       <h4>5 SCOPES OF ICE CREAM</h4>
+       <p>PRICE : Rs.400</p>
+       </div>
+
+    </div>
+</div>
+</body>
+</html>

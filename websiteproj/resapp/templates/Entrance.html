@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMESH'S DELIGHTS</title>
+</head>
+<style>
+    
+.Grid {
+    position: absolute; 
+    top: 59%; 
+    left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:2cm;
+    width: 80%;
+    text-align: center;
+}
+
+
+.Grid .col {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px white;
+    padding: 0.4cm;
+    border-radius: 0.2cm;
+    color: white;
+}
+
+.Grid .col h3,
+.Grid .col h4,
+.Grid .col p {
+    margin: 0.4cm 0;
+}
+    body{
+        margin:0;
+        padding: 0;
+        position: relative;
+    }
+    .main{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        padding: 1cm; 
+    }
+    img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(50%);
+
+}
+nav a {
+  text-decoration:none;
+  color: rgb(91, 241, 244);
+  margin: 100px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration:underline;
+}
+nav p{
+    text-align: center;
+    font-size:1.8cm;
+    letter-spacing: 0.3cm;
+    margin-top:  2cm;
+    margin-bottom: 2cm;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px black;
+}
+</style>
+<body>
+    {% load static %}
+    <img src="{% static 'interior.jpg' %}">
+    
+    <div class="main">
+        <nav>
+            <p>GAYATHRI DELIGHTS</p>
+            <span style="color: aqua;">HOME</span> <a href="{% url 'menu' %}">MENU</a> <a href="{% url 'adminstration' %}">ADMINSTRATION</a> <a href="{% url 'contact' %}">CONTACT US</a>
+            
+        </nav>
+    </div>
+    <div class="Grid">
+        <div class="col">
+            <h3>ICONIC DISH</h3>
+            <h4>5 Scoops of Ice Cream</h4>
+            <p>The 5 Scoops of Ice Cream is the iconic dish of our restaurant.  
+            Most guests love it and often order it after every meal. Some even visit just to enjoy this delightful treat!</p>
+        </div>
+
+    
+    
+        <div class="col">
+            <h3>PRE-BOOK A TABLE</h3>
+            <p>You can book your table up to 3 days in advance. On our Contact page, you will find our WhatsApp number.
+            Send us a message, and we will ask you for details like date, time, and number of guests. Please answer all questions to confirm your booking and enjoy a wonderful dining experience!</p>
+        </div>
+        <div class="col">
+            <h3>OPENING HOURS</h3>
+            <p>
+            MON – FRI: 8:00 AM – 10:00 PM
+            SAT & SUN: 10:00 AM – 11:00 PM
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        margin-bottom: 1cm;
+    }
+    .row1{
+        display: flex;
+        justify-content: center;
+        gap: 10cm;
+        margin-bottom: 20px;
+        flex-wrap:wrap;
+    }
+    .row2{
+        display:flex;
+        justify-content: center;
+        gap:8cm;
+        flex-wrap:wrap;
+    }
+    .row1 div,.row2 div{
+        text-align:center;
+        width:200px;
+    }
+    .row1 img,.row2 img{
+        width:150px;
+        height:150px;
+        object-fit: cover;
+        border-radius: 1cm;
+        border: 1cm;
+        border-color: black;
+        margin-bottom:10px;
+        box-shadow: 4px 4px 6px black;
+        
+    }
+        a {
+    text-decoration: none; 
+    color: black;           
+    margin: 0 100px;        
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+nav {
+    text-align: center;
+    background-color: rgba(43, 239, 242, 0.871);
+    padding: 1px;
+    
+   }
+</style>
+<body>
+    <div class="main">
+        <nav>
+            <p><a href="{% url 'home' %}">HOME</a> <a href="{% url 'menu' %}">MENU</a> ADMINSTRATION <a href="{% url 'contact' %}">CONTACT US</a>
+            </p>
+        </nav>
+    </div>
+    
+    <h1>MEET OUR TEAM</h1>
+    <div class="row1">
+    <div class="Founder">
+        {% load static %}
+        <img src="{% static 'founder.jpg' %}" alt="Founder img">
+        <h2>MRS.SELVI</h2>
+        <h4>FOUNDER</h4>
+        <p></p>
+    </div>
+    <div class="co-Founder" >
+        {% load static %}
+        <img src="{% static 'co founder.jpg' %}" alt="co-founder img">
+        <h2>MR.CHANDRU</h2>
+        <h4>CO-FOUNDER</h4>
+        <p></p>
+    </div>
+    </div>
+    <div class="row2">
+    <div class="CHEF1">
+         {% load static %}
+        <img src="{% static 'bhat.jpg' %}" alt="Chef img">
+        <h2>CHEF BHATT</h2> 
+        <p>ASIAN CUISINE SPECIALIST</p>
+    </div>
+    <div class="CHEF2">
+         {% load static %}
+        <img src="{% static 'shreeya.jpg' %}" alt="Chef img">
+        <h2>CHEF SHREEYA ADAK</h2>
+        <p>PASTRY & COCKTAIL SPECIALIST</p>
+    </div>
+    <div class="CHEF3">
+        {% load static %}
+        <img src="{% static 'mad.jpg' %}" alt="Chef img">
+        <h2>CHEF KOUSHIK</h2>
+        <p>CONTINENTAL & FAST FOOD SPECIALIST</p>
+    </div>
+    </div>
+</body>
+</html>
