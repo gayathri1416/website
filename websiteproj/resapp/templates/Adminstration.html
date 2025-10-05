@@ -6,6 +6,10 @@
     <title>Administration</title>
 </head>
 <style>
+    body{
+        background-color:darkmagenta;
+        color:white;
+    }
     h1{
         text-align: center;
         margin-bottom: 1cm;
@@ -26,6 +30,7 @@
     .row1 div,.row2 div{
         text-align:center;
         width:200px;
+        text-shadow: 3px 3px 13px rgb(116, 5, 5);
     }
     .row1 img,.row2 img{
         width:150px;
@@ -33,14 +38,14 @@
         object-fit: cover;
         border-radius: 1cm;
         border: 1cm;
-        border-color: black;
+        border-color:white;
         margin-bottom:10px;
-        box-shadow: 4px 4px 6px black;
+        box-shadow: 4px 4px 6px rgb(17, 15, 9);
         
     }
         a {
     text-decoration: none; 
-    color: black;           
+    color: rgb(9, 0, 0);           
     margin: 0 100px;        
     font-weight: bold;
     font-size: x-large;
@@ -51,11 +56,15 @@ nav {
     text-align: center;
     background-color: rgba(43, 239, 242, 0.871);
     padding: 1px;
+    color: black;
+    box-shadow: 2px 2px 16px black;
     
    }
+
+
 </style>
 <body>
-    <div class="main">
+<div class="main">
         <nav>
             <p><a href="{% url 'home' %}">HOME</a> <a href="{% url 'menu' %}">MENU</a> ADMINSTRATION <a href="{% url 'contact' %}">CONTACT US</a>
             </p>
@@ -83,21 +92,21 @@ nav {
     <div class="CHEF1">
          {% load static %}
         <img src="{% static 'bhat.jpg' %}" alt="Chef img">
-        <h2>CHEF BHATT</h2> 
+        <h2>CHEF VENKATESH BHAT</h2> 
         <p>ASIAN CUISINE SPECIALIST</p>
     </div>
     <div class="CHEF2">
          {% load static %}
         <img src="{% static 'shreeya.jpg' %}" alt="Chef img">
-        <h2>CHEF SHREEYA ADAK</h2>
+        <h2>CHEF SHREEYA ADKA</h2>
         <p>PASTRY & COCKTAIL SPECIALIST</p>
     </div>
     <div class="CHEF3">
         {% load static %}
         <img src="{% static 'mad.jpg' %}" alt="Chef img">
-        <h2>CHEF KOUSHIK</h2>
+        <h2>CHEF KOUSHIK SHANKAR</h2>
         <p>CONTINENTAL & FAST FOOD SPECIALIST</p>
     </div>
-    </div>
+</div>
 </body>
 </html>
